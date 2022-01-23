@@ -201,20 +201,19 @@ def bot():
 
 def menu():
 	try:
-		os.mkdir("Hasil_Cp")
-	except:
-		pass
-	try:
-		os.mkdir("Hasil_Ok")
-	except:
-		pass
-	clear()
-	banner()
-	try:
 		token = open("token.txt","r").read()
 		cintaku = requests.get("https://graph.facebook.com/me?access_token="+token)
 		pillow = json.loads(cintaku.text)
 		hujan = pillow["name"]
+	except KeyError:
+		jalan(balmond+m+" Token Kadaluarsa")
+		time.sleep(0.5)
+		login()
+	except IOError:
+		print ('')
+		jalan(balmond+m+" Token Kadaluarsa")
+		time.sleep(0.5)
+		login()
 	except requests.exceptions.ConnectionError:
 		jalan(balmond+m+" Tidak Ada Internet")
 		time.sleep(0.5)

@@ -168,9 +168,8 @@ def banner():
 
 def login():
 	clear()
-	banner()
 	print('')
-	token = input("\n"+balmond+l+" Masukkan Token Facebook : ")
+	token = input("\n"+balmond+l+" MASUKAN TOKEN : ")
 	try:
 		hujan = requests.get("https://graph.facebook.com/me?access_token="+token)
 		batu = json.loads(hujan.text)
@@ -183,7 +182,8 @@ def login():
 		jalan(balmond+m+" Login Gagal")
 		time.sleep(0.5)
 		login()
-
+	ecit()
+	menu()
 # BOT
 
 def bot():

@@ -148,9 +148,9 @@ def clear():
 # LOGO
 
 def banner():                
-	print
-	print
-	print
+	print('')
+	print('')
+	print('')
 	jalan ('                \33[3;1m\033[1;97mW e l c o m e  T o\33[0;1m')
 	print
 	jalan ('       \033[1;96m[\33[37;1mR\033[1;96m] \033[1;96m[\033[1;97mA\033[1;96m] \033[1;96m[\033[1;97mT\033[1;96m] \033[1;96m[\033[1;97mU\033[1;96m]  \033[1;96m[\033[1;97mE\033[1;96m] \033[1;96m[\033[1;97mR\033[1;96m] \033[1;96m[\33[37;1mR\033[1;96m] \033[1;96m[\033[1;97mO\033[1;96m] \033[1;96m[\033[1;97mR\033[1;96m]\033[1;96m')
@@ -163,6 +163,7 @@ def banner():
 def login():
 	clear()
 	banner()
+	print('')
 	token = input("\n"+balmond+l+" Masukkan Token Facebook : ")
 	try:
 		hujan = requests.get("https://graph.facebook.com/me?access_token="+token)

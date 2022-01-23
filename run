@@ -148,33 +148,14 @@ def clear():
 # LOGO
 
 def banner():
-	print(u+"""
-   _     _     _     _     _     _     _  
-  / \   / \   / \   / \   / \   / \   / \ 
- ( R ) ( e ) ( n ) ( d ) ( y ) ( X ) ( D )
-  \_/   \_/   \_/   \_/   \_/   \_/   \_/ 
-╔═╗╔═╗
-╚╗╚╝╔╝
-─╚╗╔╝─
-─╔╝╚╗─
-╔╝╔╗╚╗
-╚═╝╚═╝
-   _     _     _     _     _     _     _  
-  / \   / \   / \   / \   / \   / \   / \ 
- ( L ) ( o ) ( s ) ( D ) ( o ) ( o ) ( l )
-  \_/   \_/   \_/   \_/   \_/   \_/   \_/ 
-
-UTHOR : Rendy-XD
-GITHUB : GITHUB.COM/KangLosDool\n"""+h+line)
-
-MAX_IPV4 = ipaddress.IPv4Address._ALL_ONES # IP
-MAX_IPV6 = ipaddress.IPv6Address._ALL_ONES # IP
-
-def random_ipv4():
-	return ipaddress.IPv4Address._string_from_ip_int(random.randint(0, MAX_IPV4))
-def random_ipv6():
-	return ipaddress.IPv6Address._string_from_ip_int(random.randint(0, MAX_IPV6))
-
+	print ('')
+	print ('')
+	print ('')
+	print ('                 \33[3;1m\033[1;97mW e l c o m e  T o\33[0;1m')
+	print ('')
+	print ('        \033[1;92m[\33[37;1mR\033[1;92m] \033[1;92m[\033[1;97mA\033[1;92m] \033[1;92m[\033[1;97mT\033[1;92m] \033[1;92m[\033[1;97mU\033[1;92m]  \033[1;92m[\033[1;97mE\033[1;92m] \033[1;92m[\033[1;97mR\033[1;92m] \033[1;92m[\33[37;1mR\033[1;92m] \033[1;92m[\033[1;97mO\033[1;92m] \033[1;92m[\033[1;97mR\033[1;92m]\033[1;92m')
+	print (' \033[1;92m ______________________________________________')
+	print ('\033[1;97m\033[1;92m¤\033[1;97m{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}\033[1;92m¤') 
 
 # LOGIN
 

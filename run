@@ -47,7 +47,7 @@ elif "kuning" in tema:
         b = "\33[1;95m" # ungu
         s = "\33[1;96m" # biru muda
 
-balmond = h+"["+k+"¤"+h+"]"
+balmond = h+">"+k+"><"+h+"<"
 
 try:
 	import concurrent.futures
@@ -147,21 +147,21 @@ def clear():
 
 # LOGO
 
-def banner():
-	print ('')
-	print ('')
-	print ('')
-	print ('                 \33[3;1m\033[1;97mW e l c o m e  T o\33[0;1m')
-	print ('')
-	print ('        \033[1;92m[\33[37;1mR\033[1;92m] \033[1;92m[\033[1;97mA\033[1;92m] \033[1;92m[\033[1;97mT\033[1;92m] \033[1;92m[\033[1;97mU\033[1;92m]  \033[1;92m[\033[1;97mE\033[1;92m] \033[1;92m[\033[1;97mR\033[1;92m] \033[1;92m[\33[37;1mR\033[1;92m] \033[1;92m[\033[1;97mO\033[1;92m] \033[1;92m[\033[1;97mR\033[1;92m]\033[1;92m')
-	print (' \033[1;92m ______________________________________________')
-	print ('\033[1;97m\033[1;92m¤\033[1;97m{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}\033[1;92m¤') 
+def banner():                
+	print
+	print
+	print
+	jalan ('                \33[3;1m\033[1;97mW e l c o m e  T o\33[0;1m')
+	print
+	jalan ('       \033[1;96m[\33[37;1mR\033[1;96m] \033[1;96m[\033[1;97mA\033[1;96m] \033[1;96m[\033[1;97mT\033[1;96m] \033[1;96m[\033[1;97mU\033[1;96m]  \033[1;96m[\033[1;97mE\033[1;96m] \033[1;96m[\033[1;97mR\033[1;96m] \033[1;96m[\33[37;1mR\033[1;96m] \033[1;96m[\033[1;97mO\033[1;96m] \033[1;96m[\033[1;97mR\033[1;96m]\033[1;96m')
+	print (' \033[1;96m  ____________________________________________')
+	print ('\033[1;97m\033[1;96m ¤\033[1;97m{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}\033[1;96m¤')
+
 
 # LOGIN
 
 def login():
 	clear()
-	logo()
 	banner()
 	token = input("\n"+balmond+l+" Masukkan Token Facebook : ")
 	try:
@@ -202,6 +202,16 @@ def bot():
 
 def menu():
 	try:
+		os.mkdir("Hasil_Cp")
+	except:
+		pass
+	try:
+		os.mkdir("Hasil_Ok")
+	except:
+		pass
+	clear()
+	banner()
+	try:
 		token = open("token.txt","r").read()
 		cintaku = requests.get("https://graph.facebook.com/me?access_token="+token)
 		pillow = json.loads(cintaku.text)
@@ -211,7 +221,6 @@ def menu():
 		time.sleep(0.5)
 		login()
 	except IOError:
-		print ('')
 		jalan(balmond+m+" Token Kadaluarsa")
 		time.sleep(0.5)
 		login()
@@ -1540,3 +1549,4 @@ def yaudah(user,pasw,loop,tes):
 if __name__ == '__main__':
 	os.system("git pull")
 	menu()
+
